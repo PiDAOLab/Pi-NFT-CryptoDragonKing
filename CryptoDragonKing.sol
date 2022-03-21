@@ -136,7 +136,7 @@ contract CryptoDragonKing is ERC721Enumerable, Ownable {
     function setMaxMint(uint256 _maxMint) public onlyOwner {
         maxMint = _maxMint;
     }
-
+    
     function withdraw(address to) public onlyOwner {
         uint256 balance = address(this).balance;
         payable(to).transfer(balance);
