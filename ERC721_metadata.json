@@ -9,12 +9,12 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "initBaseURI",
+						"name": "name_",
 						"type": "string"
 					},
 					{
 						"internalType": "string",
-						"name": "initNotRevealedUri",
+						"name": "symbol_",
 						"type": "string"
 					}
 				],
@@ -77,25 +77,6 @@
 					{
 						"indexed": true,
 						"internalType": "address",
-						"name": "previousOwner",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "newOwner",
-						"type": "address"
-					}
-				],
-				"name": "OwnershipTransferred",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
 						"name": "from",
 						"type": "address"
 					},
@@ -114,45 +95,6 @@
 				],
 				"name": "Transfer",
 				"type": "event"
-			},
-			{
-				"inputs": [],
-				"name": "MAX_SUPPLY",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "_isSaleActive",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "_revealed",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
 			},
 			{
 				"inputs": [
@@ -189,33 +131,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "baseExtension",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "flipReveal",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "flipSaleActive",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -263,90 +178,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "maxBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "maxMint",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "tokenQuantity",
-						"type": "uint256"
-					}
-				],
-				"name": "mintPiNFT",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "mintPrice",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "name",
 				"outputs": [
 					{
 						"internalType": "string",
 						"name": "",
 						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "notRevealedUri",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -369,13 +206,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "renounceOwnership",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -450,84 +280,6 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_newBaseExtension",
-						"type": "string"
-					}
-				],
-				"name": "setBaseExtension",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_newBaseURI",
-						"type": "string"
-					}
-				],
-				"name": "setBaseURI",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_maxBalance",
-						"type": "uint256"
-					}
-				],
-				"name": "setMaxBalance",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_maxMint",
-						"type": "uint256"
-					}
-				],
-				"name": "setMaxMint",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_mintPrice",
-						"type": "uint256"
-					}
-				],
-				"name": "setMintPrice",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_notRevealedURI",
-						"type": "string"
-					}
-				],
-				"name": "setNotRevealedURI",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
 						"internalType": "bytes4",
 						"name": "interfaceId",
 						"type": "bytes4"
@@ -561,49 +313,6 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "index",
-						"type": "uint256"
-					}
-				],
-				"name": "tokenByIndex",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "index",
-						"type": "uint256"
-					}
-				],
-				"name": "tokenOfOwnerByIndex",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
 						"name": "tokenId",
 						"type": "uint256"
 					}
@@ -614,19 +323,6 @@
 						"internalType": "string",
 						"name": "",
 						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "totalSupply",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -654,35 +350,10 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "newOwner",
-						"type": "address"
-					}
-				],
-				"name": "transferOwnership",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					}
-				],
-				"name": "withdraw",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
 			}
 		],
 		"devdoc": {
+			"details": "Implementation of https://eips.ethereum.org/EIPS/eip-721[ERC721] Non-Fungible Token Standard, including the Metadata extension, but not including the Enumerable extension, which is available separately as {ERC721Enumerable}.",
 			"kind": "dev",
 			"methods": {
 				"approve(address,uint256)": {
@@ -690,6 +361,9 @@
 				},
 				"balanceOf(address)": {
 					"details": "See {IERC721-balanceOf}."
+				},
+				"constructor": {
+					"details": "Initializes the contract by setting a `name` and a `symbol` to the token collection."
 				},
 				"getApproved(uint256)": {
 					"details": "See {IERC721-getApproved}."
@@ -700,14 +374,8 @@
 				"name()": {
 					"details": "See {IERC721Metadata-name}."
 				},
-				"owner()": {
-					"details": "Returns the address of the current owner."
-				},
 				"ownerOf(uint256)": {
 					"details": "See {IERC721-ownerOf}."
-				},
-				"renounceOwnership()": {
-					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
 				},
 				"safeTransferFrom(address,address,uint256)": {
 					"details": "See {IERC721-safeTransferFrom}."
@@ -724,23 +392,11 @@
 				"symbol()": {
 					"details": "See {IERC721Metadata-symbol}."
 				},
-				"tokenByIndex(uint256)": {
-					"details": "See {IERC721Enumerable-tokenByIndex}."
-				},
-				"tokenOfOwnerByIndex(address,uint256)": {
-					"details": "See {IERC721Enumerable-tokenOfOwnerByIndex}."
-				},
 				"tokenURI(uint256)": {
 					"details": "See {IERC721Metadata-tokenURI}."
 				},
-				"totalSupply()": {
-					"details": "See {IERC721Enumerable-totalSupply}."
-				},
 				"transferFrom(address,address,uint256)": {
 					"details": "See {IERC721-transferFrom}."
-				},
-				"transferOwnership(address)": {
-					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
 				}
 			},
 			"version": 1
@@ -753,7 +409,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"CryptoDragonKing/CryptoDragonKing.sol": "CryptoDragonKing"
+			"CryptoDragonKing/ERC721.sol": "ERC721"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -783,14 +439,6 @@
 				"dweb:/ipfs/QmRkhUYUUgRZ2QYJjmtQct2ubyYwS3bdUMhbuFYM12VfYn"
 			]
 		},
-		"CryptoDragonKing/CryptoDragonKing.sol": {
-			"keccak256": "0x7118e201f77acbfae32512733b60a85ef3c76e8cddbd6fa4087147bdf6b43364",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://128ee0a219df18cdf901b3ae8704ccb66864086f8069f45fd422712a841d62aa",
-				"dweb:/ipfs/QmRhHB4o25zopwMkVbTAGGvxh6T1Cqr9VBaW4Us5UZ6wis"
-			]
-		},
 		"CryptoDragonKing/ERC165.sol": {
 			"keccak256": "0x3d3fe7b1901114d50828f5c77ba7f09a2a6a65223620c837364d31b60e5982ac",
 			"license": "MIT",
@@ -805,14 +453,6 @@
 			"urls": [
 				"bzz-raw://95fcb8da176b9973c140de9af9cd3246a85e1078f702f2cd5364229ed337db2b",
 				"dweb:/ipfs/QmUVE8rfXiqz19y6isVLWgH59oukX5UXsBScebTonRfmNu"
-			]
-		},
-		"CryptoDragonKing/ERC721Enumerable.sol": {
-			"keccak256": "0xad1c4813442542df96c51c15a1a58c88016ca3fcd7d9e80d9c0c66e3a9d21391",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://9e6f8cab8df218a3acce0c85be7e6c35f4dd826fa7bd6ac02e4c1a0abfe7d779",
-				"dweb:/ipfs/QmczsdBCG3zSwcmMKY5LXktuQKgYj96xpZH16bubRoFmCn"
 			]
 		},
 		"CryptoDragonKing/IERC165.sol": {
@@ -831,14 +471,6 @@
 				"dweb:/ipfs/QmWRKN35GMhoVVkoSgRc2mWLXigMZNSTwJoGdD51g4H4dX"
 			]
 		},
-		"CryptoDragonKing/IERC721Enumerable.sol": {
-			"keccak256": "0x56b88dc6e66030571333e7780a20658e38bef856bbe37c03bbcddb44d42b0fd8",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://05e677f3b7a0b49a315623ead98b99052a2bfdc24085e051d0f3cda4d6940109",
-				"dweb:/ipfs/QmbfWXxk87NpQYyGhvtrgBBWu6GBTi4YTjdBnZSWyhRbAr"
-			]
-		},
 		"CryptoDragonKing/IERC721Metadata.sol": {
 			"keccak256": "0xbf2e88ad5b8909524def23988a9c19dd3fc968c8dcd97e4eb1515f4b616562e2",
 			"license": "MIT",
@@ -853,14 +485,6 @@
 			"urls": [
 				"bzz-raw://e1cb98658b31603d96a52cfd9008b7acfedfe673b9b8933845a0903b47baa1d1",
 				"dweb:/ipfs/QmXCZqNt8FszXJfMsaTcZrhpZeBKxmbtQZmwAr7bEwj1xr"
-			]
-		},
-		"CryptoDragonKing/Ownable.sol": {
-			"keccak256": "0x1ff0e24b46e1ffd5492d354b917f039cb789e4c24bf8fe57aa62c3805c901ec1",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://c55ea5b40556884d06b3e0eb477c269de45faa81aacca7f5536a543e3f1fe244",
-				"dweb:/ipfs/QmfE47Ftm6yRJzHAYtdj9K7HLV7boqjFuZ5er32836hvTB"
 			]
 		},
 		"CryptoDragonKing/Strings.sol": {
